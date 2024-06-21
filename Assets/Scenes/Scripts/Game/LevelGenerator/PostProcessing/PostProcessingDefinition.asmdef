@@ -1,0 +1,30 @@
+{
+    "name": "ScriptsAssembly",
+    "rootNamespace": "",
+    "references": [
+        "GUID:c579267770062bf448e75eb160330b7f",
+        "GUID:36d514892e55d4340b470c29fcab8b44",
+        "GUID:15fc0a57446b3144c949da3e2b9737a9",
+        "GUID:bc3b0daec27db604caf7fec37e54bf6d",
+        "GUID:ab67fb10353d84448ac887a7367cbda8",
+        "GUID:b4517ec124862cb4bb3b8b27d72843a6",
+        "GUID:281a4304667f958488e8c876d8cf690f",
+        "GUID:80d88d09f92abb1489388894579d53ca",
+        "GUID:a37419e4b8e996d4da23a301a44013e3",
+        "GUID:a35efad8797223d499f8c68b1f545dbc",
+        "GUID:d60799ab2a985554ea1a39cd38695018",
+        "GUID:6d1cd2be5ba39024fb7362476c42d023",
+        "GUID:f40b851808c81294bac71a52a2bc39de",
+        "GUID:df380645f10b7bc4b97d4f5eb6303d95",
+        "GUID:3eae0364be2026648bf74846acb8a731"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
