@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Bullet
+  - Enemy
+  - EnemyBullet
+  - Bomb
+  - Sword
+  - Shield
+  - Collectible
+  - Block
+  - Mission
+  - Npc
+  - Final
+  - PlayerTrigger
+  - Heal
+  - EnemyMelee
+  - PlayerProjectile
+  - EnemyProjectile
+  - PlayerMelee
+  - Floor
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Camera
+  - VFX
+  - Minimap
+  - Bomb
+  - Player
+  - Unit
+  - Weapon
+  - 
+  - Ground
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: PlatformFloors
+    uniqueID: 1968741669
+    locked: 0
+  - name: PlatformBlocks
+    uniqueID: 4275585839
+    locked: 0
+  - name: Doors
+    uniqueID: 4045229337
+    locked: 0
+  - name: Characters
+    uniqueID: 2603867999
+    locked: 0
+  - name: Bullets
+    uniqueID: 3097021071
+    locked: 0
+  - name: Camera
+    uniqueID: 2793327441
+    locked: 0
+  - name: VFX
+    uniqueID: 3341806413
+    locked: 0
