@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader
+  m_Name: AgedRelatedMacularDegeneration
   m_Shader: {fileID: -6465566751694194690, guid: 1709a09f5b3f5a74f92ebf371ef2a94c,
     type: 3}
   m_ValidKeywords: []
@@ -103,16 +103,18 @@ Material:
     - _ClearCoatSmoothness: 0
     - _Cull: 2
     - _Cutoff: 0.5
-    - _CutoffSize: 0.1
+    - _CutoffSize: 0.2
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _FalloffSize: 0.05
+    - _FalloffSize: 0.18
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _IsEnabled: 0
     - _Metallic: 0
+    - _MinusOne: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0

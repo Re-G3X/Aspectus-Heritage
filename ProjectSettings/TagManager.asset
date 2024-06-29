@@ -77,6 +77,9 @@ TagManager:
   - name: Camera
     uniqueID: 2793327441
     locked: 0
+  - name: CameraSortingLayer
+    uniqueID: 1342663877
+    locked: 0
   - name: VFX
     uniqueID: 3341806413
     locked: 0
