@@ -510,7 +510,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3986109955623337831}
   - component: {fileID: 58753846356691510}
+<<<<<<< Updated upstream
   - component: {fileID: 7141360794065256546}
+=======
+  - component: {fileID: 2694833490956106842}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: cabeca
   m_TagString: Untagged
@@ -585,7 +589,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< Updated upstream
 --- !u!114 &7141360794065256546
+=======
+--- !u!114 &2694833490956106842
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1075,7 +1083,11 @@ GameObject:
   m_Component:
   - component: {fileID: 427076015840267245}
   - component: {fileID: 2932934711628275415}
+<<<<<<< Updated upstream
   - component: {fileID: 3321564289047195374}
+=======
+  - component: {fileID: 617135164863110413}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: perna esq2
   m_TagString: Untagged
@@ -1150,7 +1162,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< Updated upstream
 --- !u!114 &3321564289047195374
+=======
+--- !u!114 &617135164863110413
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1417,7 +1433,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5576102322669465742}
   - component: {fileID: 2372060236599365691}
+<<<<<<< Updated upstream
   - component: {fileID: 2564912463448169544}
+=======
+  - component: {fileID: 8427873603930685637}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: FLECHA VERDE
   m_TagString: Untagged
@@ -1492,7 +1512,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< Updated upstream
 --- !u!114 &2564912463448169544
+=======
+--- !u!114 &8427873603930685637
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1753,7 +1777,11 @@ GameObject:
   m_Component:
   - component: {fileID: 916051295030503399}
   - component: {fileID: 8568583257306565740}
+<<<<<<< Updated upstream
   - component: {fileID: 3697037528747036413}
+=======
+  - component: {fileID: 6638900289792540237}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: ARCO5
   m_TagString: Untagged
@@ -1828,7 +1856,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< Updated upstream
 --- !u!114 &3697037528747036413
+=======
+--- !u!114 &6638900289792540237
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1941,7 +1973,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5697849046959088139}
   - component: {fileID: 8463462435459622671}
+<<<<<<< Updated upstream
   - component: {fileID: 1811717540529267462}
+=======
+  - component: {fileID: 8614604010159704606}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: FELIZ1
   m_TagString: Untagged
@@ -2016,7 +2052,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< Updated upstream
 --- !u!114 &1811717540529267462
+=======
+--- !u!114 &8614604010159704606
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2076,7 +2116,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6552712216873040837}
   - component: {fileID: 5352029559117781459}
+<<<<<<< Updated upstream
   - component: {fileID: 7404575897885513217}
+=======
+  - component: {fileID: 3911262081652923791}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: mao dir1
   m_TagString: Untagged
@@ -2151,7 +2195,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< Updated upstream
 --- !u!114 &7404575897885513217
+=======
+--- !u!114 &3911262081652923791
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2262,7 +2310,11 @@ GameObject:
   m_Component:
   - component: {fileID: 981807345727451646}
   - component: {fileID: 768300090042008067}
+<<<<<<< Updated upstream
   - component: {fileID: 1048168011107951685}
+=======
+  - component: {fileID: 8822207447128136014}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: zpack_0
   m_TagString: Untagged
@@ -2337,7 +2389,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< Updated upstream
 --- !u!114 &1048168011107951685
+=======
+--- !u!114 &8822207447128136014
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

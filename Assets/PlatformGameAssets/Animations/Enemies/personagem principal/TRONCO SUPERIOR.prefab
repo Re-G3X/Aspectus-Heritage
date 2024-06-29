@@ -527,7 +527,11 @@ GameObject:
   m_Component:
   - component: {fileID: 728631115461247179}
   - component: {fileID: 5471704108503255149}
+<<<<<<< Updated upstream
   - component: {fileID: 1435562449124036339}
+=======
+  - component: {fileID: 2616583170759366784}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: ARCO5
   m_TagString: Untagged
@@ -602,7 +606,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< Updated upstream
 --- !u!114 &1435562449124036339
+=======
+--- !u!114 &2616583170759366784
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1153,7 +1161,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8142947861206590272}
   - component: {fileID: 7075078360891368231}
+<<<<<<< Updated upstream
   - component: {fileID: 7168546169655916697}
+=======
+  - component: {fileID: 1477757987623374442}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: zpack_0
   m_TagString: Untagged
@@ -1228,7 +1240,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< Updated upstream
 --- !u!114 &7168546169655916697
+=======
+--- !u!114 &1477757987623374442
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1456,7 +1472,11 @@ GameObject:
   m_Component:
   - component: {fileID: 303878707544057345}
   - component: {fileID: 2576539519352397117}
+<<<<<<< Updated upstream
   - component: {fileID: 557769141275992943}
+=======
+  - component: {fileID: 2160439094472153687}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: FELIZ1
   m_TagString: Untagged
@@ -1531,7 +1551,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< Updated upstream
 --- !u!114 &557769141275992943
+=======
+--- !u!114 &2160439094472153687
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

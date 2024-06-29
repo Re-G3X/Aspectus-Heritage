@@ -449,7 +449,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1396613382785282981}
   - component: {fileID: 9169498343847043456}
+<<<<<<< Updated upstream
   - component: {fileID: 8950043196632295320}
+=======
+  - component: {fileID: 6354162479267943551}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: "CABE\xC7A"
   m_TagString: Untagged
@@ -524,7 +528,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< Updated upstream
 --- !u!114 &8950043196632295320
+=======
+--- !u!114 &6354162479267943551
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
