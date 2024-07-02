@@ -1,0 +1,69 @@
+name: Build and Test
+
+on:
+  pull_request:
+    branches:
+      - master
+      - Develop
+
+env:
+  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+
+jobs:
+  buildWebGL:
+    name: Build for WebGL 🖥️
+    runs-on: ubuntu-latest
+    strategy:
+        fail-fast: false
+    steps:
+      - name: Activate unity
+      # exit code is 1 for manual activation
+        continue-on-error: true
+        run: |          
+          echo "$UNITY_LICENSE" | tr -d '\r' > UnityLicenseFile.ulf
+          unity-editor -nographics -logFile /dev/stdout -manualLicenseFile UnityLicenseFile.ulf -quit | echo "Activation finished"
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          lfs: true
+
+      - name: Restore Library cache
+        uses: actions/cache@v2
+        with:
+          path: Library
+          key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            Library-
+
+      - name: Build WebGL
+        uses: game-ci/unity-builder@v2
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          targetPlatform: WebGL
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: build-WebGL
+          path: build/WebGL
+          
+  deployToGitHubPages:
+    needs: [buildWebGL]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          lfs: true
+        
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: build-WebGL
+          path: build/WebGL
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: build/WebGL
