@@ -18,10 +18,9 @@ public class PostProcessingController : MonoBehaviour {
         // Obter o componente de volume
         Volume volume = GetComponent<Volume>();
 
-
-        int randomValue = Random.Range(1, 8);
-
         setShaderNull();
+        int randomValue = Random.Range(1, 8);
+        Debug.Log(randomValue);
 
         if (randomValue == 1) {//Glaucoma
             setVignette();

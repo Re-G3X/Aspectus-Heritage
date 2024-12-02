@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec0b414e77cfb7743be47f4ba69b1e76, type: 3}
   m_Name: Breno - PostQuestion4
   m_EditorClassIdentifier: 
-  question: "O quanto voc\xEA concorda com esta afirma\xE7\xE3o: \"As recompensas
-    deste n\xEDvel foram na medida certa\"?"
+  question: "A degenera\xE7\xE3o macular afeta principalmente qual parte do olho?"
   description: 1 = Discordo Fortemente       <->      5 = Concordo Fortemente
   answer: 0

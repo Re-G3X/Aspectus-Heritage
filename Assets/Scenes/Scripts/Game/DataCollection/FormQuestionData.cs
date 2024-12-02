@@ -7,7 +7,6 @@ namespace Game.DataCollection
     {
         [TextArea]
         public string question;
-        public string description;
-        public int answer;
+        public string[] answers = new string[5];
     }
 }

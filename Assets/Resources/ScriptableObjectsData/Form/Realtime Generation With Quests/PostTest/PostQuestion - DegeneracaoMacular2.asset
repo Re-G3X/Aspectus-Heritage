@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec0b414e77cfb7743be47f4ba69b1e76, type: 3}
+  m_Name: PostQuestion - DegeneracaoMacular2
+  m_EditorClassIdentifier: 
+  question: "Os principais sintomas da degenera\xE7\xE3o macular s\xE3o: "
+  answers:
+  - "Degenera\xE7\xE3o  do nervo \xF3ptico e cansa\xE7o constante"
+  - Dificuldade em enxerga no escuro ou visualizar fontes de luz intensas
+  - "Perda de vis\xE3o total ap\xF3s progress\xE3o e obscura\xE7\xE3o da \xE1rea
+    perif\xE9rica da vis\xE3o"
+  - "Vis\xE3o distorcida e dificuldade em diferenciar formatos e cores"
+  - "Vis\xE3o distorcida e dificuldade ler livros ou reconhecer rostos."

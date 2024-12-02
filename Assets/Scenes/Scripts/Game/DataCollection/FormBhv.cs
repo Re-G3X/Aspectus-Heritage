@@ -36,23 +36,42 @@ namespace Game.DataCollection
             submitButton.SetAsLastSibling();
         }
 
-        public void Submit()
-        {
-            #if UNITY_EDITOR
-            AssetDatabase.SaveAssetIfDirty(questionsData);
-            #endif
-            List<int> answers = new List<int>();
-            foreach (FormQuestionBhv q in questions)
-            {
-                answers.Add(q.questionData.answer);
+        public void Submit() {
+        #if UNITY_EDITOR
+                    AssetDatabase.SaveAssetIfDirty(questionsData);
+        #endif
+
+            // Lista de respostas como strings
+            List<string> answers = new List<string>();
+
+            foreach (FormQuestionBhv q in questions) {
+                // Aqui, pegamos a primeira resposta
+                answers.Add(q.questionData.answers[0]);  // Pegando a primeira resposta como string
+
                 q.ResetToggles();
             }
-            if (formID == 1)
-                PostTestFormQuestionAnsweredEventHandler?.Invoke(null, new FormAnsweredEventArgs(formID, answers));
-            else
-            {
-                PreTestFormQuestionAnsweredEventHandler?.Invoke(this, new FormAnsweredEventArgs(formID, answers));
+
+            // Convertendo List<string> para List<int>, se necessário
+            List<int> intAnswers = new List<int>();
+            foreach (var answer in answers) {
+                int parsedAnswer;
+                // Tenta converter a string para inteiro, se não conseguir, usa -1 ou algum valor padrão
+                if (int.TryParse(answer, out parsedAnswer)) {
+                    intAnswers.Add(parsedAnswer);
+                }
+                else {
+                    intAnswers.Add(-1);  // Adiciona -1 caso não seja possível converter
+                }
+            }
+
+            // Invocando o evento com List<int> convertido
+            if (formID == 1) {
+                PostTestFormQuestionAnsweredEventHandler?.Invoke(null, new FormAnsweredEventArgs(formID, intAnswers));
+            }
+            else {
+                PreTestFormQuestionAnsweredEventHandler?.Invoke(this, new FormAnsweredEventArgs(formID, intAnswers));
             }
         }
+
     }
 }

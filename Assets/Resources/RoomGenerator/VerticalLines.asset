@@ -153,28 +153,6 @@ MonoBehaviour:
     - tileName: Tile
       <TileType>k__BackingField: 0
     - tileName: Tile
-      <TileType>k__BackingField: 1
-    - tileName: Tile
-      <TileType>k__BackingField: 1
-    - tileName: Tile
-      <TileType>k__BackingField: 0
-    - tileName: Tile
-      <TileType>k__BackingField: 0
-    - tileName: Tile
-      <TileType>k__BackingField: 0
-    - tileName: Tile
-      <TileType>k__BackingField: 1
-    - tileName: Tile
-      <TileType>k__BackingField: 0
-    - tileName: Tile
-      <TileType>k__BackingField: 0
-  - tileRowName: TileRow
-    <Tiles>k__BackingField:
-    - tileName: Tile
-      <TileType>k__BackingField: 0
-    - tileName: Tile
-      <TileType>k__BackingField: 0
-    - tileName: Tile
       <TileType>k__BackingField: 0
     - tileName: Tile
       <TileType>k__BackingField: 0
@@ -219,9 +197,11 @@ MonoBehaviour:
     - tileName: Tile
       <TileType>k__BackingField: 0
     - tileName: Tile
-      <TileType>k__BackingField: 1
+      <TileType>k__BackingField: 0
     - tileName: Tile
-      <TileType>k__BackingField: 1
+      <TileType>k__BackingField: 0
+    - tileName: Tile
+      <TileType>k__BackingField: 0
     - tileName: Tile
       <TileType>k__BackingField: 0
     - tileName: Tile
@@ -229,7 +209,27 @@ MonoBehaviour:
     - tileName: Tile
       <TileType>k__BackingField: 0
     - tileName: Tile
-      <TileType>k__BackingField: 1
+      <TileType>k__BackingField: 0
+    - tileName: Tile
+      <TileType>k__BackingField: 0
+  - tileRowName: TileRow
+    <Tiles>k__BackingField:
+    - tileName: Tile
+      <TileType>k__BackingField: 0
+    - tileName: Tile
+      <TileType>k__BackingField: 0
+    - tileName: Tile
+      <TileType>k__BackingField: 0
+    - tileName: Tile
+      <TileType>k__BackingField: 0
+    - tileName: Tile
+      <TileType>k__BackingField: 0
+    - tileName: Tile
+      <TileType>k__BackingField: 0
+    - tileName: Tile
+      <TileType>k__BackingField: 0
+    - tileName: Tile
+      <TileType>k__BackingField: 0
     - tileName: Tile
       <TileType>k__BackingField: 0
     - tileName: Tile
