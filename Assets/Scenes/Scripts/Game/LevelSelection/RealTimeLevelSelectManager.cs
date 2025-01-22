@@ -21,9 +21,27 @@ namespace Game.LevelSelection
             _hasPressedButton = false;
         }
 
-        private void Start()
-        {
+        private void Start() {
+            var levelItem = LevelItems[8]; // 8º item (índice 8)
 
+            // Se o nível for do tipo RealTimeLevelData, prossegue com a seleção
+            if (levelItem.Level is RealTimeLevelData realTimeLevelData) {
+                var profileWeights = new List<int>{
+                realTimeLevelData.AchievementWeight,
+                realTimeLevelData.CreativityWeight,
+                realTimeLevelData.ImmersionWeight,
+                realTimeLevelData.MasteryWeight};
+
+                PreTestFormQuestionAnsweredEventHandler?.Invoke(this, new FormAnsweredEventArgs(-1, profileWeights));
+
+                // Carregar a cena desejada
+                SceneManager.LoadScene("ContentGenerator");
+            }
+            else {
+                Debug.LogError("Level Data is not Real Time!");
+            }
+
+            // Invoca o manipulador de estado de salvamento, caso seja necessário
             SaveStateHandler?.Invoke();
         }
 

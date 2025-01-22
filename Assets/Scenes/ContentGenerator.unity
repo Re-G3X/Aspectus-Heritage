@@ -226,6 +226,12 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 5677077938545413857, guid: eb8bf5bcac51cf14cafb3c50436bff97,
         type: 3}
+      propertyPath: defaultProjectile
+      value: 
+      objectReference: {fileID: 11400000, guid: 6a7c560ce29994047b70211cb31791ad,
+        type: 2}
+    - target: {fileID: 5677077938545413857, guid: eb8bf5bcac51cf14cafb3c50436bff97,
+        type: 3}
       propertyPath: <Selected>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: e5e228bcc52c0e04a8167376fa2f41e5,
@@ -353,7 +359,32 @@ PrefabInstance:
     - target: {fileID: 5677077939224943540, guid: eb8bf5bcac51cf14cafb3c50436bff97,
         type: 3}
       propertyPath: m_fontSize
-      value: 63.9
+      value: 24.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677077939224943540, guid: eb8bf5bcac51cf14cafb3c50436bff97,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 24.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677077939224943540, guid: eb8bf5bcac51cf14cafb3c50436bff97,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677077939224943542, guid: eb8bf5bcac51cf14cafb3c50436bff97,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677077939420639679, guid: eb8bf5bcac51cf14cafb3c50436bff97,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 172.15997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677077939420639679, guid: eb8bf5bcac51cf14cafb3c50436bff97,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 172.16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb8bf5bcac51cf14cafb3c50436bff97, type: 3}
@@ -363,6 +394,24 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1491739848}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1491739850 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5677077939224943546, guid: eb8bf5bcac51cf14cafb3c50436bff97,
+    type: 3}
+  m_PrefabInstance: {fileID: 1491739848}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1491739851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491739850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ca14e8990e8c6418e1c8a02ca54033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1583647083
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,7 +628,7 @@ Camera:
     x: 0
     y: 0
     width: 1
-    height: 1
+    height: 0.9995777
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60

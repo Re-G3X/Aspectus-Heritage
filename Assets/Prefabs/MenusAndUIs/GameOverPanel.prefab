@@ -363,12 +363,17 @@ MonoBehaviour:
   levelSelector:
     Scene: {fileID: 102900000, guid: 6ab9f7015ab81b644a9b23f3eb5d80e2, type: 3}
     SceneName: LevelSelector
-    sceneIndex: 8
+    sceneIndex: 4
     sceneEnabled: 1
   levelWithEnemies:
-    Scene: {fileID: 102900000, guid: 01db2214e2b7fd9428a4bfa5e4cf8c66, type: 3}
-    SceneName: LevelWithEnemies
-    sceneIndex: 3
+    Scene: {fileID: 102900000, guid: 98e262a735cfb66468973ba893ee3ac8, type: 3}
+    SceneName: ExperimentLevelSelector
+    sceneIndex: 8
+    sceneEnabled: 1
+  ExperimentLevelSelector:
+    Scene: {fileID: 102900000, guid: 98e262a735cfb66468973ba893ee3ac8, type: 3}
+    SceneName: ExperimentLevelSelector
+    sceneIndex: 8
     sceneEnabled: 1
 --- !u!1 &8522026030083511819
 GameObject:

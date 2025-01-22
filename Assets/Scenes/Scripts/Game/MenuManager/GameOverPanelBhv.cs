@@ -11,6 +11,7 @@ namespace Game.MenuManager
         [SerializeField] private GameObject nextPanel;
         [SerializeField] private SceneReference levelSelector;
         [SerializeField] private SceneReference levelWithEnemies;
+        [SerializeField] private SceneReference ExperimentLevelSelector;
 
         public static event EventHandler ToLevelSelectEventHandler;
         public static event EventHandler RestartLevelEventHandler;
@@ -35,7 +36,8 @@ namespace Game.MenuManager
         {
             RestartLevelEventHandler?.Invoke(null, EventArgs.Empty);
             gameObject.SetActive(false);
-            SceneManager.LoadScene(levelWithEnemies.SceneName);
+            //SceneManager.LoadScene(levelWithEnemies.SceneName);
+            SceneManager.LoadScene(ExperimentLevelSelector.SceneName);
         }
     }
 }
