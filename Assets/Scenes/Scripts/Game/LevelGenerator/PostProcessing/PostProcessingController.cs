@@ -1,11 +1,12 @@
+using System;
 using SOHNE.Accessibility.Colorblindness;
 
 using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
-using Codice.CM.WorkspaceServer.Tree.Changes;
 using System.Collections;
+using Random = UnityEngine.Random;
 
 public class PostProcessingController : MonoBehaviour {
 
@@ -14,81 +15,93 @@ public class PostProcessingController : MonoBehaviour {
     public Text EffectName;
     public Text EffectDescription;
 
-    void Start() {
-        // Obter o componente de volume
-        Volume volume = GetComponent<Volume>();
+    private Volume _volume;
+    private Coroutine _hideText;
 
-        setShaderNull();
-        int randomValue = Random.Range(1, 8);
-        Debug.Log(randomValue);
+    public void Start()
+    {
+	    // Obter o componente de volume
+	    _volume = GetComponent<Volume>();
 
-        if (randomValue == 1) {//Glaucoma
-            setVignette();
-            EffectName.text = "Glaucoma";
-            EffectDescription.text = "Afetados gradativamente perdem visão periférica, enxergando através de um “túnel”. Pode causar perda total de visão. ";
-            Debug.Log("Chamando Glaucoma");
-        }
-        if (randomValue == 2) {//Catarata
-            EffectName.text = "Catarata";
-            EffectDescription.text = "Afetados sentem certo nível de embaçamento na visão, sensibilidade à luz e dificuldade de enxerga à noite.";
-            setBloom(volume);
-            Debug.Log("Chamando catarata");
-        }
-        if (randomValue == 3) {//Degeneração Macular 
-            setDegeneracaoMacular();
-            EffectName.text = "Degeneração Macular";
-            EffectDescription.text = "Afetados podem sentir um embaçamento/distorção da visão. Afeta principalmente pessoas mais velhas";
-            Debug.Log("Chamando Degeneração macular");
-        }
-        if (randomValue == 4) {//Protanopia                
-            Colorblindness.Instance.Change(1);
-            EffectName.text = "Protanopia";
-            EffectDescription.text = "Afetados têm dificuldade em perceber tons de vermelho, levando à confusão entre vermelho e verde.";
-            Debug.Log("Chamando Protanopia");
-        }
-        if (randomValue == 5) {//Deuteranopia
-            Colorblindness.Instance.Change(3);
-            EffectName.text = "Deuteranopia";
-            EffectDescription.text = "Afetados têm dificuldade em perceber tons de verde, levando à confusão entre verde e vermelho";
-            Debug.Log("Chamando Deuteranopia");
-        }
-        if (randomValue == 6) {//Tritanopia
-            Colorblindness.Instance.Change(5);
-            EffectDescription.text = "Afetados têm dificuldade em distinguir entre azul e amarelo, podendo também afetar a percepção de tons de verde e roxo.";
-            EffectName.text = "Tritanopia";
-            Debug.Log("Chamando Tritanopia");
-        }
-        if (randomValue == 7) {//Acromatopsia
-            Colorblindness.Instance.Change(7);
-            EffectDescription.text = "Afetados têm dificuldade em perceber cores.";
-            EffectName.text = "Acromatopsia";
-            Debug.Log("Chamando Acromatopsia");
-        }
-        StartCoroutine(cleanText());
+        SetNewRandomCondition();
     }
 
+	private void SetNewRandomCondition()
+    {
+	    SetShaderNull();
+	    int randomValue = Random.Range(1, 8);
+	    Debug.Log(randomValue);
 
-    private void setVignette() {
+	    switch (randomValue)
+	    {
+		    case 1: //Glaucoma
+			    SetVignette();
+			    EffectName.text = "Glaucoma";
+			    EffectDescription.text = "Afetados gradativamente perdem visï¿½o perifï¿½rica, enxergando atravï¿½s de um ï¿½tï¿½nelï¿½. Pode causar perda total de visï¿½o. ";
+			    Debug.Log("Chamando Glaucoma");
+			    break;
+		    case 2: //Catarata
+			    EffectName.text = "Catarata";
+			    EffectDescription.text = "Afetados sentem certo nï¿½vel de embaï¿½amento na visï¿½o, sensibilidade ï¿½ luz e dificuldade de enxerga ï¿½ noite.";
+			    SetBloom();
+			    Debug.Log("Chamando catarata");
+			    break;
+		    case 3: //Degeneraï¿½ï¿½o Macular 
+			    SetDegeneracaoMacular();
+			    EffectName.text = "Degeneraï¿½ï¿½o Macular";
+			    EffectDescription.text = "Afetados podem sentir um embaï¿½amento/distorï¿½ï¿½o da visï¿½o. Afeta principalmente pessoas mais velhas";
+			    Debug.Log("Chamando Degeneraï¿½ï¿½o macular");
+			    break;
+		    case 4: //Protanopia                
+			    Colorblindness.Instance.Change(1);
+			    EffectName.text = "Protanopia";
+			    EffectDescription.text = "Afetados tï¿½m dificuldade em perceber tons de vermelho, levando ï¿½ confusï¿½o entre vermelho e verde.";
+			    Debug.Log("Chamando Protanopia");
+			    break;
+		    case 5: //Deuteranopia
+			    Colorblindness.Instance.Change(3);
+			    EffectName.text = "Deuteranopia";
+			    EffectDescription.text = "Afetados tï¿½m dificuldade em perceber tons de verde, levando ï¿½ confusï¿½o entre verde e vermelho";
+			    Debug.Log("Chamando Deuteranopia");
+			    break;
+		    case 6: //Tritanopia
+			    Colorblindness.Instance.Change(5);
+			    EffectDescription.text = "Afetados tï¿½m dificuldade em distinguir entre azul e amarelo, podendo tambï¿½m afetar a percepï¿½ï¿½o de tons de verde e roxo.";
+			    EffectName.text = "Tritanopia";
+			    Debug.Log("Chamando Tritanopia");
+			    break;
+		    case 7: //Acromatopsia
+			    Colorblindness.Instance.Change(7);
+			    EffectDescription.text = "Afetados tï¿½m dificuldade em perceber cores.";
+			    EffectName.text = "Acromatopsia";
+			    Debug.Log("Chamando Acromatopsia");
+			    break;
+	    }
+
+	    _hideText = StartCoroutine(CleanText());
+    }
+
+    private void SetVignette() {
         material.SetInt("_IsEnabled", 1);
         material.SetInt("_MinusOne", 0);
         material.SetFloat("_CutoffSize", 0.2f);
     }
 
-    private void setDegeneracaoMacular() {
+    private void SetDegeneracaoMacular() {
         material.SetInt("_IsEnabled", 1);
         material.SetInt("_MinusOne", 1);
         material.SetFloat("_CutoffSize", 0.1f);
     }
 
-    private void setShaderNull() {
+    private void SetShaderNull() {
         material.SetInt("_IsEnabled", 0);
         material.SetInt("_MinusOne", 0);
     }
 
-    private void setBloom(Volume volume) {
+    private void SetBloom() {
         Bloom bloom;
 
-        if (volume.profile.TryGet<Bloom>(out bloom)) {
+        if (_volume.profile.TryGet<Bloom>(out bloom)) {
             Debug.Log("Carregando bloom");
         }
 
@@ -99,7 +112,7 @@ public class PostProcessingController : MonoBehaviour {
         bloom.threshold.value = 0.0f;
     }
 
-    IEnumerator cleanText() {
+    private IEnumerator CleanText() {
         yield return new WaitForSeconds(5);
 
         EffectName.text = "";
