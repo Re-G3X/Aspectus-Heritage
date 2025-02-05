@@ -15,7 +15,7 @@ namespace Game.MenuManager
         private void Start()
         {
             OldText = ProgressText.text;
-            ProgressText.text = "Generating Content";
+            ProgressText.text = "Gerando conteudo";
         }
 
         private void OnEnable()

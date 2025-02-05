@@ -37,42 +37,42 @@ public class PostProcessingController : MonoBehaviour {
 		    case 1: //Glaucoma
 			    SetVignette();
 			    EffectName.text = "Glaucoma";
-			    EffectDescription.text = "Afetados gradativamente perdem vis�o perif�rica, enxergando atrav�s de um �t�nel�. Pode causar perda total de vis�o. ";
+			    EffectDescription.text = "Afetados gradativamente perdem visão periférica, enxergando através de um 'túnel'. Pode causar perda total de visão. ";
 			    Debug.Log("Chamando Glaucoma");
 			    break;
 		    case 2: //Catarata
 			    EffectName.text = "Catarata";
-			    EffectDescription.text = "Afetados sentem certo n�vel de emba�amento na vis�o, sensibilidade � luz e dificuldade de enxerga � noite.";
+			    EffectDescription.text = "Afetados sentem certo nível de embaçamento na visão, sensibilidade à luz e dificuldade de enxerga à noite.";
 			    SetBloom();
 			    Debug.Log("Chamando catarata");
 			    break;
 		    case 3: //Degenera��o Macular 
 			    SetDegeneracaoMacular();
-			    EffectName.text = "Degenera��o Macular";
-			    EffectDescription.text = "Afetados podem sentir um emba�amento/distor��o da vis�o. Afeta principalmente pessoas mais velhas";
-			    Debug.Log("Chamando Degenera��o macular");
+			    EffectName.text = "Degeneração Macular";
+			    EffectDescription.text = "Afetados podem sentir um embaçamento/distorção da visão. Afeta principalmente pessoas mais velhas";
+			    Debug.Log("Chamando Degeneração macular");
 			    break;
 		    case 4: //Protanopia                
 			    Colorblindness.Instance.Change(1);
 			    EffectName.text = "Protanopia";
-			    EffectDescription.text = "Afetados t�m dificuldade em perceber tons de vermelho, levando � confus�o entre vermelho e verde.";
+			    EffectDescription.text = "Afetados têm dificuldade em perceber tons de vermelho, levando à confusão entre vermelho e verde.";
 			    Debug.Log("Chamando Protanopia");
 			    break;
 		    case 5: //Deuteranopia
 			    Colorblindness.Instance.Change(3);
 			    EffectName.text = "Deuteranopia";
-			    EffectDescription.text = "Afetados t�m dificuldade em perceber tons de verde, levando � confus�o entre verde e vermelho";
+			    EffectDescription.text = "Afetados têm dificuldade em perceber tons de verde, levando à confusão entre verde e vermelho";
 			    Debug.Log("Chamando Deuteranopia");
 			    break;
 		    case 6: //Tritanopia
 			    Colorblindness.Instance.Change(5);
-			    EffectDescription.text = "Afetados t�m dificuldade em distinguir entre azul e amarelo, podendo tamb�m afetar a percep��o de tons de verde e roxo.";
+			    EffectDescription.text = "Afetados têm dificuldade em distinguir entre azul e amarelo, podendo também afetar a percepção de tons de verde e roxo.";
 			    EffectName.text = "Tritanopia";
 			    Debug.Log("Chamando Tritanopia");
 			    break;
 		    case 7: //Acromatopsia
 			    Colorblindness.Instance.Change(7);
-			    EffectDescription.text = "Afetados t�m dificuldade em perceber cores.";
+			    EffectDescription.text = "Afetados têm dificuldade em perceber cores.";
 			    EffectName.text = "Acromatopsia";
 			    Debug.Log("Chamando Acromatopsia");
 			    break;
