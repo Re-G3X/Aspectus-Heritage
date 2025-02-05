@@ -7,13 +7,17 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using System.Collections;
 using Random = UnityEngine.Random;
+using TMPro;
 
 public class PostProcessingController : MonoBehaviour {
 
     public Material material;
 
-    public Text EffectName;
-    public Text EffectDescription;
+    public GameObject EffectName;
+    public GameObject EffectDescription;
+    
+    private TextMeshProUGUI _effectName;
+    private TextMeshProUGUI _effectDescription;
 
     private Volume _volume;
     private Coroutine _hideText;
@@ -22,7 +26,8 @@ public class PostProcessingController : MonoBehaviour {
     {
 	    // Obter o componente de volume
 	    _volume = GetComponent<Volume>();
-
+	    _effectName = EffectName.GetComponent<TextMeshProUGUI>();
+	    _effectDescription = EffectDescription.GetComponent<TextMeshProUGUI>();
         SetNewRandomCondition();
     }
 
@@ -36,44 +41,44 @@ public class PostProcessingController : MonoBehaviour {
 	    {
 		    case 1: //Glaucoma
 			    SetVignette();
-			    EffectName.text = "Glaucoma";
-			    EffectDescription.text = "Afetados gradativamente perdem visão periférica, enxergando através de um 'túnel'. Pode causar perda total de visão. ";
+			    _effectName.text = "Glaucoma";
+			    _effectDescription.text = "Afetados gradativamente perdem visão periférica, enxergando através de um 'túnel'. Pode causar perda total de visão. ";
 			    Debug.Log("Chamando Glaucoma");
 			    break;
 		    case 2: //Catarata
-			    EffectName.text = "Catarata";
-			    EffectDescription.text = "Afetados sentem certo nível de embaçamento na visão, sensibilidade à luz e dificuldade de enxerga à noite.";
+			    _effectName.text = "Catarata";
+			    _effectDescription.text = "Afetados sentem certo nível de embaçamento na visão, sensibilidade à luz e dificuldade de enxerga à noite.";
 			    SetBloom();
 			    Debug.Log("Chamando catarata");
 			    break;
 		    case 3: //Degenera��o Macular 
 			    SetDegeneracaoMacular();
-			    EffectName.text = "Degeneração Macular";
-			    EffectDescription.text = "Afetados podem sentir um embaçamento/distorção da visão. Afeta principalmente pessoas mais velhas";
+			    _effectName.text = "Degeneração Macular";
+			    _effectDescription.text = "Afetados podem sentir um embaçamento/distorção da visão. Afeta principalmente pessoas mais velhas";
 			    Debug.Log("Chamando Degeneração macular");
 			    break;
 		    case 4: //Protanopia                
 			    Colorblindness.Instance.Change(1);
-			    EffectName.text = "Protanopia";
-			    EffectDescription.text = "Afetados têm dificuldade em perceber tons de vermelho, levando à confusão entre vermelho e verde.";
+			    _effectName.text = "Protanopia";
+			    _effectDescription.text = "Afetados têm dificuldade em perceber tons de vermelho, levando à confusão entre vermelho e verde.";
 			    Debug.Log("Chamando Protanopia");
 			    break;
 		    case 5: //Deuteranopia
 			    Colorblindness.Instance.Change(3);
-			    EffectName.text = "Deuteranopia";
-			    EffectDescription.text = "Afetados têm dificuldade em perceber tons de verde, levando à confusão entre verde e vermelho";
+			    _effectName.text = "Deuteranopia";
+			    _effectDescription.text = "Afetados têm dificuldade em perceber tons de verde, levando à confusão entre verde e vermelho";
 			    Debug.Log("Chamando Deuteranopia");
 			    break;
 		    case 6: //Tritanopia
 			    Colorblindness.Instance.Change(5);
-			    EffectDescription.text = "Afetados têm dificuldade em distinguir entre azul e amarelo, podendo também afetar a percepção de tons de verde e roxo.";
-			    EffectName.text = "Tritanopia";
+			    _effectDescription.text = "Afetados têm dificuldade em distinguir entre azul e amarelo, podendo também afetar a percepção de tons de verde e roxo.";
+			    _effectName.text = "Tritanopia";
 			    Debug.Log("Chamando Tritanopia");
 			    break;
 		    case 7: //Acromatopsia
 			    Colorblindness.Instance.Change(7);
-			    EffectDescription.text = "Afetados têm dificuldade em perceber cores.";
-			    EffectName.text = "Acromatopsia";
+			    _effectDescription.text = "Afetados têm dificuldade em perceber cores.";
+			    _effectName.text = "Acromatopsia";
 			    Debug.Log("Chamando Acromatopsia");
 			    break;
 	    }
@@ -115,7 +120,7 @@ public class PostProcessingController : MonoBehaviour {
     private IEnumerator CleanText() {
         yield return new WaitForSeconds(5);
 
-        EffectName.text = "";
-        EffectDescription.text = "";
+        _effectName.text = "";
+        _effectDescription.text = "";
     }
 }
