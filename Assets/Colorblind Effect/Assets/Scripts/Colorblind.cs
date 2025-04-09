@@ -1,6 +1,8 @@
 ﻿// Copyright (c) 2016 Jakub Boksansky, Adam Pospisil - All Rights Reserved
 // Colorblind Effect Unity Plugin 1.0
 using UnityEngine;
+using System;
+
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -30,9 +32,11 @@ namespace Wilberforce
 		// initialization method
         void Start()
         {
-			// if shader is not set, try to find it first
-            if (colorblindShader == null) colorblindShader = Shader.Find("Hidden/Wilberforce/Colorblind");
-
+            // if shader is not set, try to find it first
+            if (colorblindShader == null) {
+                colorblindShader = Shader.Find("Hidden/Wilberforce/Colorblind");
+                Debug.Log("não foi opossivel achar colorblind");
+            }
 			// shader wasn't found 
             if (colorblindShader == null)
             {

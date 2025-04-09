@@ -131,6 +131,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 662348016924478507, guid: b9e38676673037f42a3f7e63103be6d7,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 662348016924478507, guid: b9e38676673037f42a3f7e63103be6d7,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140580483353834930, guid: b9e38676673037f42a3f7e63103be6d7,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140580483353834930, guid: b9e38676673037f42a3f7e63103be6d7,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 4140580483702526835, guid: b9e38676673037f42a3f7e63103be6d7,
         type: 3}
       propertyPath: m_Name
@@ -841,12 +861,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 35.7
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
@@ -942,8 +962,8 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0.999889
-    height: 1
+    width: 1
+    height: 0.9993932
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -2388,12 +2408,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 40.28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
