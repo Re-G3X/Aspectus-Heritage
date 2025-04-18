@@ -10,7 +10,7 @@ public class Doencas : MonoBehaviour
     void Start()
     {
         TextDialogue = GetComponent<TextMeshProUGUI>();
-        int randomValue = Random.Range(1, 12);
+        int randomValue = Random.Range(1, 10);
 
         if (randomValue == 1) {//Glaucoma
             TextDialogue.text = "O glaucoma é uma descrição genérica para um grupo de doenças que afetam a visão ao causar danos no nervo óptico," +
@@ -29,32 +29,32 @@ public class Doencas : MonoBehaviour
                 "tratamentos para retardar o progresso. Existem os métodos de prevenção, sendo eles, não fumar, exercícios regulares, manter níveis de pressão de sangue e colesterol regulares" +
                 ",se alimentar de maneira saudável, incluindo verduras e peixe";
         }
-        if (randomValue == 5) {//catarata
+      /*  if (randomValue == 5) {//catarata
             TextDialogue.text = "Os sintomas da catarata podem incluir: visão embaçada ou turva, cores desbotadas, dificuldade em enxergar no escuro ou fontes ou de luz muito fortes, entre outros.";
         }
         if (randomValue == 6) {//catarata
             TextDialogue.text = "A catarata pode ser causada por uma gama de possibilidades,incluindo: histórico familiar com a doença, problemas " +
                 "de saúde como diabetes, ferimentos na área ocular, uso de esteroides, fumar e expor os olhos por muito tempo no sol.";
-        }
-        if (randomValue == 7) {//daltonismo 
+        }*/
+        if (randomValue == 5) {//daltonismo 
             TextDialogue.text = "O daltonismo é uma condição genética que afeta a percepção das cores, tornando difícil distinguir certas tonalidades. Essa " +
                 "condição ocorre devido a alterações nos cones da retina, responsáveis pela percepção das cores. Embora o daltonismo não tenha cura, ele geralmente não" +
                 " afeta a visão geral nem causa outros problemas oculares. Existem ferramentas, como óculos ou aplicativos, que podem ajudar" +
                 " a melhorar a percepção das cores em alguns casos.";
         }
-        if (randomValue == 8) {//daltonismo Protanopia
+        if (randomValue == 6) {//daltonismo Protanopia
             TextDialogue.text = "O daltanoismo protanopia é causado por uma deficiência em um dos cones, especificamente no que é chamado " +
                 "de cone L, que é responsável por capturar os comprimentos de onda longos.  ";
         }
-        if (randomValue == 9) {//daltonismo Deuteranopia
+        if (randomValue == 7) {//daltonismo Deuteranopia
             TextDialogue.text = "O daltonismo deuteranopia é causado por uma deficiências nas células chamadas de cone M, responsável por recolher " +
                 "as informações dos comprimentos de onda médios.";
         }
-        if (randomValue == 10) {
+        if (randomValue == 8) {
             TextDialogue.text = "\r\nO Daltonismo Tritanopia é uma forma rara de daltonismo, em que a pessoa tem dificuldade " +
                 "em perceber as cores azul e amarela, sendo incapaz de distinguir entre essas tonalidades. Esse tipo de deficiência é causado por uma falha nos cones sensíveis à luz azul na retina.";
         }
-        if (randomValue == 11) {
+        if (randomValue == 9) {
             TextDialogue.text = "A Acromatopsia é uma condição rara em que a pessoa não consegue perceber nenhuma cor, vendo o mundo" +
                 " em tons de cinza. Isso ocorre devido à falta de células cones funcionais na retina, responsáveis pela percepção das cores.";
         }

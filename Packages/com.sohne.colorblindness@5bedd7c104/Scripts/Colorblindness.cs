@@ -62,7 +62,7 @@ namespace SOHNE.Accessibility.Colorblindness {
                 PlayerPrefs.SetInt("Accessibility.ColorblindType", 0);
 
             SearchVolumes();
-            Change(currentType); // ✅ Aplica o filtro na inicialização
+            Change(currentType); 
         }
 
         private void Update() {
@@ -72,7 +72,7 @@ namespace SOHNE.Accessibility.Colorblindness {
 
         private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
             SearchVolumes();
-            Change(currentType); // ✅ Garante que o filtro seja reaplicado ao carregar nova cena
+            Change(currentType); 
         }
 
         #endregion
