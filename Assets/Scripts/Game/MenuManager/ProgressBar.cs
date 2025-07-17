@@ -36,6 +36,9 @@ namespace Game.MenuManager
 
         private IEnumerator UpdateProgressBarAndText(float completionRate, bool hasFinished)
         {
+            if (Bar == null)
+                yield break; // Sai da coroutine se o objeto foi destruído
+
             if (completionRate > 1.0f && !hasFinished)
             {
                 ProgressText.text = "Creating Better Levels";

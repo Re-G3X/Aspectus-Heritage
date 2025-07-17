@@ -2,10 +2,13 @@
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
-namespace SOHNE.Accessibility.Colorblindness {
-    public enum ColorblindTypes {
+namespace SOHNE.Accessibility.Colorblindness
+{
+    public enum ColorblindTypes
+    {
         Normal = 0,
         Protanopia,
         Protanomaly,
@@ -15,9 +18,11 @@ namespace SOHNE.Accessibility.Colorblindness {
         Tritanomaly,
         Achromatopsia,
         Achromatomaly,
+        BloomFilter // Novo filtro
     }
 
-    public class Colorblindness : MonoBehaviour {
+    public class Colorblindness : MonoBehaviour
+    {
         public KeyCode changeKey = KeyCode.F1;
 
         public static Colorblindness Instance { get; private set; }
@@ -26,10 +31,12 @@ namespace SOHNE.Accessibility.Colorblindness {
         private int maxType;
         private int _currentType = 0;
 
-        private int currentType {
+        private int currentType
+        {
             get => _currentType;
-            set {
-                if (value >= maxType)
+            set
+            {
+                if (value > maxType) 
                     _currentType = 0;
                 else
                     _currentType = value;
@@ -38,12 +45,15 @@ namespace SOHNE.Accessibility.Colorblindness {
 
         #region Unity Lifecycle
 
-        private void Awake() {
-            if (Instance == null) {
+        private void Awake()
+        {
+            if (Instance == null)
+            {
                 Instance = this;
                 DontDestroyOnLoad(gameObject);
             }
-            else if (Instance != this) {
+            else if (Instance != this)
+            {
                 Destroy(gameObject);
                 return;
             }
@@ -51,35 +61,40 @@ namespace SOHNE.Accessibility.Colorblindness {
             maxType = (int)System.Enum.GetValues(typeof(ColorblindTypes)).Cast<ColorblindTypes>().Last();
         }
 
-        private void OnEnable() {
+        private void OnEnable()
+        {
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
 
-        private void Start() {
+        private void Start()
+        {
             if (PlayerPrefs.HasKey("Accessibility.ColorblindType"))
                 currentType = PlayerPrefs.GetInt("Accessibility.ColorblindType");
             else
                 PlayerPrefs.SetInt("Accessibility.ColorblindType", 0);
 
             SearchVolumes();
-            Change(currentType); 
+            Change(currentType);
         }
 
-        private void Update() {
+        private void Update()
+        {
             if (Input.GetKeyDown(changeKey))
                 InitChange();
         }
 
-        private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
             SearchVolumes();
-            Change(currentType); 
+            Change(currentType);
         }
 
         #endregion
 
         #region Volume Management
 
-        private void SearchVolumes() {
+        private void SearchVolumes()
+        {
             volumes = GameObject.FindObjectsOfType<Volume>();
         }
 
@@ -87,13 +102,15 @@ namespace SOHNE.Accessibility.Colorblindness {
 
         #region Filtro Daltonismo
 
-        public void Change(int filterIndex = -1) {
+        public void Change(int filterIndex = -1)
+        {
             filterIndex = filterIndex <= -1 ? PlayerPrefs.GetInt("Accessibility.ColorblindType") : filterIndex;
             currentType = Mathf.Clamp(filterIndex, 0, maxType);
             StartCoroutine(ApplyFilter());
         }
 
-        private void InitChange() {
+        private void InitChange()
+        {
             if (volumes == null || volumes.Length == 0) return;
 
 #if UNITY_EDITOR
@@ -106,20 +123,33 @@ namespace SOHNE.Accessibility.Colorblindness {
             currentType++;
         }
 
-        private IEnumerator ApplyFilter() {
+        private IEnumerator ApplyFilter()
+        {
             string filterName = ((ColorblindTypes)currentType).ToString();
-            ResourceRequest loadRequest = Resources.LoadAsync<VolumeProfile>($"Colorblind/{filterName}");
 
+            // Se for o filtro especial BloomFilter, aplica diretamente
+            if ((ColorblindTypes)currentType == ColorblindTypes.BloomFilter)
+            {
+                foreach (var volume in volumes)
+                {
+                    SetBloom(volume);
+                }
+                yield break;
+            }
+
+            ResourceRequest loadRequest = Resources.LoadAsync<VolumeProfile>($"Colorblind/{filterName}");
             yield return loadRequest;
 
             var loadedProfile = loadRequest.asset as VolumeProfile;
 
-            if (loadedProfile == null) {
+            if (loadedProfile == null)
+            {
                 Debug.LogError($"[Colorblindness] Falha ao carregar perfil: Colorblind/{filterName}");
                 yield break;
             }
 
-            foreach (var volume in volumes) {
+            foreach (var volume in volumes)
+            {
                 // ⚠️ Evita modificar perfil original diretamente
                 VolumeProfile profileInstance = Instantiate(loadedProfile);
                 volume.profile = profileInstance;
@@ -129,5 +159,35 @@ namespace SOHNE.Accessibility.Colorblindness {
         }
 
         #endregion
+        private void SetBloom(Volume volume)
+        {
+            Debug.Log("entrou no set bloom");
+            // Carrega o VolumeProfile "Catarata" dos Resources
+            var catarataProfile = Resources.Load<VolumeProfile>("Colorblind/Catarata");
+            if (catarataProfile == null)
+            {
+                Debug.LogError("VolumeProfile 'Catarata' não encontrado em Resources/Colorblind!");
+                return;
+            }
+
+            // Instancia para não modificar o asset original
+            VolumeProfile profileInstance = Instantiate(catarataProfile);
+            volume.profile = profileInstance;
+
+            Bloom bloom;
+            if (profileInstance.TryGet(out bloom))
+            {
+                bloom.active = true;
+                bloom.intensity.overrideState = true;
+                bloom.intensity.value = 2.2f;
+                bloom.threshold.overrideState = true;
+                bloom.threshold.value = 0.1f;
+            }
+            else
+            {
+                Debug.LogWarning("Bloom não encontrado no Volume Profile Catarata!");
+            }
+        }
     }
+   
 }

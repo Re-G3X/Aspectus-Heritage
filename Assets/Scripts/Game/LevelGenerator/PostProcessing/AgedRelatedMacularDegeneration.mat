@@ -103,7 +103,7 @@ Material:
     - _ClearCoatSmoothness: 0
     - _Cull: 2
     - _Cutoff: 0.5
-    - _CutoffSize: 0.2
+    - _CutoffSize: 0.1
     - _DecalMeshBiasType: 0
     - _DecalMeshDepthBias: 0
     - _DecalMeshViewBias: 0
@@ -116,9 +116,9 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _IsEnabled: 0
+    - _IsEnabled: 1
     - _Metallic: 0
-    - _MinusOne: 0
+    - _MinusOne: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0

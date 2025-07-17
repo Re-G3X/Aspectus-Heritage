@@ -303,10 +303,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.43655303
+    x: 0
     y: 0
-    width: 0.58585864
-    height: 0.5858586
+    width: 1
+    height: 0.99967617
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -702,9 +702,47 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1516576440621938556, guid: 018140db0d3665645b9b0bdaf219c6ec,
+        type: 3}
+      propertyPath: m_text
+      value: "Este jogo faz parte de um projeto de inicia\xE7\xE3o tecnologica cujo
+        objetivo \xE9 melhorar a empatia em rela\xE7\xE3o a deficiencias visuais,
+        al\xE9m de trazer mais informa\xE7\xF5es pelas mesmas.\r\nVoc\xEA deve navegar
+        pelo n\xEDvel, encontrando chaves que abrem portas trancadas.\r\nUse as teclas
+        WASD para se mover, as setas para atirar e o X para interagir com NPCs e
+        objetos.\r\nN\xE3o se preocupe em ir pelo caminho errado, com o tempo ou
+        com a quantidade de mortes :)\r\n\r\nPara vencer o jogo, voc\xEA deve encontrar
+        o item abaixo:"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516576440621938556, guid: 018140db0d3665645b9b0bdaf219c6ec,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 18.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1516576440918953186, guid: 018140db0d3665645b9b0bdaf219c6ec,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516576440918953190, guid: 018140db0d3665645b9b0bdaf219c6ec,
+        type: 3}
+      propertyPath: sceneToLoad.Scene
+      value: 
+      objectReference: {fileID: 102900000, guid: 98e262a735cfb66468973ba893ee3ac8,
+        type: 3}
+    - target: {fileID: 1516576440918953190, guid: 018140db0d3665645b9b0bdaf219c6ec,
+        type: 3}
+      propertyPath: sceneToLoad.SceneName
+      value: ExperimentLevelSelector
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516576440918953190, guid: 018140db0d3665645b9b0bdaf219c6ec,
+        type: 3}
+      propertyPath: sceneToLoad.sceneIndex
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516576440918953190, guid: 018140db0d3665645b9b0bdaf219c6ec,
+        type: 3}
+      propertyPath: sceneToLoad.sceneEnabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1516576441142089456, guid: 018140db0d3665645b9b0bdaf219c6ec,
